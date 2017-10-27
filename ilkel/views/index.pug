@@ -1,0 +1,34 @@
+html
+    head
+        title= title
+        link(rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.css")
+        link(rel="stylesheet" href="css/style.css")
+    body
+        nav(class="nav navbar-default")
+            div
+                ul(class="nav navbar-nav")
+                    li(class="active")
+                        a(href="/pug") Home
+                    li
+                        a(href="/albums.html") Albums
+                    li
+                        a(href="/photos.html") Photos
+        h1= message
+        div(class="container")
+            div(class="row")
+                if images.lenght == 0
+                    div(class="col-sm-12")
+                    |  p  No Albums
+                each image in images
+                div(class="col-sm-3 col-xs-6")
+                    div(class="album-cover")
+                        a(href="/photos")
+                            img(src="images/img1.jpeg")
+                div(class="col-sm-3 col-xs-6")
+                    div(class="album-cover")
+                        a(href="/photos")
+                            img(src="images/img2.jpeg")
+                div(class="col-sm-3 col-xs-6")
+                    div(class="album-cover")
+                        a(href="/photos")
+                            img(src="images/img3.jpeg")
